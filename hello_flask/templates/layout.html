@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    </head>
+
+    <body>
+        <div style="background-color: rgb(8, 167, 16); height:520px; padding-top:15px; ">
+        
+                  
+        <h1 style="font-size:35px; color:rgb(30, 20, 5); margin:5px;">  
+            <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+            <a href="{{ url_for('about') }}" class="navbar-item">About</a>
+            <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
+            <a href="{{ url_for('ask_us') }}" class="navbar-item">Ask Me!</a>
+   
+        <div class="body-content">
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+        </div>
+        <!--Footer--> 
+        <br>
+<br> <br>
+        <footer style="height:auto; background-color:#487a02;">
+            <h2>© 2022</h2>
+          </footer>
+    </body>
+</html>
